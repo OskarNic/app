@@ -8,12 +8,6 @@ class Nation(models.Model):
     def __str__(self):
         return self.name
 
-class Type(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
 class Tank(models.Model):
     name   =models.CharField(max_length=50)
     nation =models.ForeignKey(Nation, on_delete=models.CASCADE)
@@ -21,3 +15,10 @@ class Tank(models.Model):
 
     def __str__(self):
         return self.name
+        
+class Type(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+

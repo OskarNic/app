@@ -1,0 +1,16 @@
+<html>
+<body>
+ 
+<h1>List of all types of vehicles</h1>
+{% if types_list %}
+    <ul>
+    {% for type in types_list %}
+        <li>{{ type.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No types are available.</p>
+{% endif %}
+
+</body>
+</html>

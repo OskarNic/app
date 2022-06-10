@@ -1,0 +1,17 @@
+<html>
+<body>
+ 
+<h1><em>Great armoured vevicles almanach</em></h1>
+<h3>Choose your favourite!</h3>
+{% if nation_list %}
+    <ul>
+    {% for nation in nation_list %}
+        <li><a href="/encyklopedia/{{ nation.id }}/">{{ nation.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No nations are available.</p>
+{% endif %}
+
+</body>
+</html>
